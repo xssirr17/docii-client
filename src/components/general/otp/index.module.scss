@@ -1,0 +1,22 @@
+.otp-inputs {
+  @include flex($justify: space-between);
+  gap: space(5);
+  width: 100%;
+  --border-color: var(--color-background-tertiary);
+  &__input {
+    @include typography(title-large);
+    border-radius: $border-radius-xs;
+    background-color: var(--color-background-secondary);
+    color: var(--color-text-primary-700);
+    border: solid 1.25px var(--border-color);
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    transition: scale 0.3s ease;
+  }
+  &__input:focus {
+    --border-color: var(--color-palette-primary-400);
+    border: solid 1.5px var(--border-color);
+    scale: 1.1;
+  }
+}

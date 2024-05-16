@@ -1,0 +1,35 @@
+.base-checkbox {
+  padding: space(2.5) space(2.5);
+  @include flex($align: center);
+  gap: space(3);
+  cursor: pointer;
+
+  &__input {
+    @include flex($justify: center);
+    width: space(6);
+    height: space(6);
+    min-width: space(6);
+    cursor: pointer;
+    border-radius: $border-radius-xxs;
+    appearance: none;
+    border: 1.5px solid var(--color-text-secondary-500);
+    transition: all 0.3s ease;
+
+    &_active {
+      background-color: var(--color-palette-primary-400);
+      border-color: var(--color-palette-primary-400);
+      &::before {
+        content: '\2713';
+        min-width: space(6);
+        width: space(6);
+        height: space(6);
+        color: var(--color-text-secondary-100);
+        text-align: center;
+      }
+    }
+  }
+  &__text {
+    text-align: left;
+    @include typography(body-medium);
+  }
+}

@@ -1,0 +1,78 @@
+.home-view {
+  @include flex(column);
+  gap: space(8);
+  margin-bottom: 70px;
+  &__header {
+    @include flex($justify: space-between);
+    width: 100%;
+  }
+  &__header-text {
+    @include typography(title-large);
+    color: var(--color-text-primary-700);
+  }
+  &__header-icon {
+    > div > div {
+      @include flex($align: center);
+      width: space(6);
+      height: space(6);
+      svg,
+      path {
+        stroke: var(--color-text-primary-700);
+      }
+    }
+  }
+  &__categories {
+    @include flex($justify: space-between);
+    width: 100%;
+  }
+  &__ads {
+    @include flex($justify: space-between, $align: flex-end);
+    padding: space(4) space(4) 0;
+    border-radius: $border-radius-sm;
+    background-color: var(--color-palette-primary-100);
+    width: 100%;
+  }
+  &__ads-content {
+    @include flex(column);
+    gap: space(3);
+    margin-bottom: space(5);
+  }
+  &__ads-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2rem;
+    text-align: left;
+    color: var(--color-text-primary-700);
+  }
+  &__top-doctor-container {
+    gap: space(4);
+    width: 100%;
+  }
+  &__top-doctor-header {
+    @include flex($justify: space-between);
+    margin-bottom: space(4);
+    width: 100%;
+  }
+  &__top-doctor-title {
+    @include typography(title-large);
+    color: var(--color-text-primary-700);
+  }
+  &__top-doctor-all {
+    text-decoration: none;
+    color: var(--color-palette-primary-400);
+  }
+  &__top-doctor-list {
+    @include flex();
+    gap: space(4);
+    overflow-x: auto;
+    @include hide-scrollbar;
+    @include customScrollBar();
+  }
+}
+
+.top-doctor-list {
+  &__card-wrapper {
+    border: solid 1px var(--color-background-tertiary);
+    border-radius: $border-radius-sm;
+  }
+}

@@ -1,0 +1,5 @@
+@use '../abstracts' as *;
+
+@function space($step: 1) {
+  @return calc($base-spacer * $step);
+}

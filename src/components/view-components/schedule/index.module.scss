@@ -1,0 +1,74 @@
+.schedule-card {
+  padding: space(4);
+  border: solid 1px var(--color-background-tertiary);
+  border-radius: $border-radius-xs;
+  width: 100%;
+  @include flex(column);
+  gap: space(5);
+
+  &__personal-info {
+    @include flex($justify: space-between);
+    width: 100%;
+  }
+
+  &__name-wrapper {
+    @include flex(column);
+    gap: space(3);
+  }
+
+  &__full-name {
+    @include typography(title-large);
+    color: var(--color-text-primary-700);
+  }
+
+  &__reserve-info {
+    @include flex();
+    gap: space(4);
+    width: 100%;
+  }
+
+  &__reserve-icon {
+    > div {
+      @include flex($align: center);
+      width: space(6);
+      height: space(6);
+
+      svg,
+      path {
+        stroke: var(--color-text-primary-700);
+      }
+    }
+  }
+
+  &__reserve-item {
+    @include flex();
+    gap: space(2);
+  }
+
+  &__reserve-value {
+    @include typography(body-large);
+    color: var(--color-text-primary-700);
+
+  }
+
+  &__category {
+    color: var(--color-text-secondary-500);
+    @include typography(body-medium);
+  }
+
+  &__image {
+    width: 40px;
+    height: 40px;
+    border-radius: $border-radius-circle;
+  }
+
+  &__actions {
+    @include flex();
+    gap: space(2);
+    width: 100%;
+  }
+
+  &__action_cancel {
+    background-color: var(--color-palette-primary-300);
+  }
+}

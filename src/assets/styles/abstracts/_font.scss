@@ -1,0 +1,41 @@
+$ff-primary: Montserrat;
+$ff-secondary: Roboto;
+
+$font-url: '@/assets/fonts';
+
+$font-faces: (
+  $ff-primary: (
+    300: (
+      font-style: normal,
+      font-weight: 300,
+      src: url('#{$font-url}/roboto/Roboto-Black.ttf')
+    ),
+    normal: (
+      font-style: normal,
+      font-weight: normal,
+      src: url('#{$font-url}/roboto/Roboto-Regular.ttf')
+    ),
+    bold: (
+      font-style: normal,
+      font-weight: bold,
+      src: url('#{$font-url}/roboto/Roboto-Bold.ttf')
+    )
+  ),
+  $ff-secondary: (
+    300: (
+      font-style: normal,
+      font-weight: 300,
+      src: url('#{$font-url}/montserrat/Montserrat-Black.ttf')
+    ),
+    normal: (
+      font-style: normal,
+      font-weight: normal,
+      src: url('#{$font-url}/montserrat/Montserrat-Regular.ttf')
+    ),
+    bold: (
+      font-style: normal,
+      font-weight: bold,
+      src: url('#{$font-url}/montserrat/Montserrat-Bold.ttf')
+    )
+  )
+);

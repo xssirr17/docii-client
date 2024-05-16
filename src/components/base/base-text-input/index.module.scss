@@ -1,0 +1,65 @@
+.base-input {
+  width: 100%;
+  height: 3.5rem;
+  transition: all 0.05s;
+  border-radius: $border-radius-md;
+  background-color: var(--color-background-secondary);
+  padding: space(2.5) space(4);
+  @include flex($justify: space-between);
+  position: relative;
+  --input-color: var(--color-text-secondary-500);
+  --border-color: var(--color-background-tertiary);
+  --message-color: var(--color-error-100);
+
+  border: solid 1px var(--border-color);
+
+  &_error {
+    --input-color: var(--color-error-100);
+    --border-color: var(--color-error-100);
+  }
+
+  &__input {
+    width: 100%;
+    height: 100%;
+    color: var(--color-text-primary-700);
+    &::placeholder {
+      color: var(--input-color);
+    }
+    background-color: transparent;
+    padding: 0 space(2);
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus,
+    &:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0px 1000px var(--color-background-secondary) inset;
+      -webkit-text-fill-color: var(--color-text-primary-700);
+    }
+  }
+
+  &:has(&__input:focus) {
+    --input-color: var(--color-palette-primary-400);
+    --border-color: var(--color-palette-primary-400);
+    border: solid 1.5px var(--border-color);
+  }
+  &__icon {
+    // TODO : this is shit code fix this later
+    height: 100%;
+
+    @include flex($align: center);
+    > div > div {
+      @include flex($align: center);
+      width: space(6);
+      height: space(6);
+      svg,
+      path {
+        stroke: var(--input-color);
+      }
+    }
+  }
+  &__error-message {
+    position: absolute;
+    color: var(--message-color);
+    bottom: -20px;
+    @include typography(body-small);
+  }
+}

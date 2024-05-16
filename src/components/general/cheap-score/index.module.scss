@@ -1,0 +1,21 @@
+.score-container {
+  @include flex($align: center);
+  gap: space(2);
+  background-color: var(--color-palette-primary-100);
+  border-radius: $border-radius-base;
+  padding: space(0.5) space(1);
+  &__score {
+    @include typography(body-small);
+    color: var(--color-palette-primary-400);
+  }
+  &__icon {
+    > div > div {
+      @include flex($align: center);
+
+      svg,
+      path {
+        stroke: var(--color-palette-primary-400);
+      }
+    }
+  }
+}

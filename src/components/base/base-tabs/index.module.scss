@@ -1,0 +1,21 @@
+.base-tabs {
+  @include flex();
+  border-radius: $border-radius-xxs;
+  background-color: var(--color-palette-primary-100);
+
+  &__tab {
+    border-radius: $border-radius-xxs;
+    @include typography(body-large);
+
+    &_inactive {
+      color: var(--color-text-primary-700);
+      background-color: transparent;
+    }
+
+    &_active {
+      @include typography(title-large);
+      color: var(--color-text-secondary-100);
+      background-color: var(--color-palette-primary-400);
+    }
+  }
+}

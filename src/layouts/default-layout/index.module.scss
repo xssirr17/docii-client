@@ -1,0 +1,18 @@
+.default-layout {
+  @include flex(column);
+  min-height: 100vh;
+  height: 100vh;
+  max-width: 450px;
+  overflow-y: auto;
+  width: 100%;
+  background-color: var(--color-background-primary);
+
+  &__main {
+    padding: space(5);
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+    @include hide-scrollbar;
+    @include customScrollBar();
+  }
+}

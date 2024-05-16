@@ -1,0 +1,22 @@
+@use '../abstracts' as *;
+@use '../tools/' as *;
+
+root {
+  margin: 0;
+  font-family: $ff-primary $ff-secondary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: var(--color-background-root);
+  @include flex($justify: center);
+}
+
+html,
+body {
+  margin: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

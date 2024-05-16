@@ -1,0 +1,13 @@
+@use '../abstracts' as *;
+
+@each $font-family, $font-value in $font-faces {
+  @each $font-weight, $font-properties in $font-value {
+    @font-face {
+      font-family: $font-family;
+
+      @each $key, $value in $font-properties {
+        #{$key}: #{$value};
+      }
+    }
+  }
+}

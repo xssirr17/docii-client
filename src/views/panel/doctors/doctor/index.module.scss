@@ -1,0 +1,95 @@
+.doctor-view {
+  @include flex(column);
+  gap: space(3);
+  overflow-y: auto;
+  @include hide-scrollbar();
+  height: 100%;
+
+  &__about-wrapper {
+    @include flex(column);
+    margin: space(5) 0;
+    gap: space(3);
+  }
+
+  &__sections-wrapper {
+    @include flex(column);
+    width: 100%;
+  }
+
+  &__about-title {
+    color: var(--color-text-primary-700);
+    @include typography(title-large);
+    text-align: left;
+  }
+
+  &__about-description {
+    color: var(--color-text-primary-700);
+    @include typography(body-medium);
+    text-align: left;
+    white-space: wrap;
+  }
+
+  &__divider {
+    background-color: var(--color-text-primary-700);
+    width: 100%;
+    height: 1.5px;
+  }
+
+  &__appointment-times {
+    @include flex();
+    @include hide-scrollbar;
+    @include customScrollBar();
+    gap: space(3);
+    width: 100%;
+    margin: space(3) 0;
+    overflow-x: auto;
+
+  }
+
+  &__present-times {
+    width: 100%;
+    @include flex($wrap: wrap, $justify: start);
+    gap: space(5);
+    padding: space(3) 0;
+  }
+
+  &__present-times_loading {
+    @include flex($justify: center);
+  }
+
+  &__submit-btn {
+    margin-top: auto;
+    margin-bottom: space(15);
+  }
+
+  &__no-appointment {
+    @include typography(title-large);
+    color: var(--color-text-primary-600);
+  }
+
+  &__login-modal {
+
+  }
+}
+
+
+.login-modal {
+  color: red;
+
+  &__content {
+    @include typography(title-large);
+    color: var(--color-text-primary-700);
+    margin: space(8) 0;
+  }
+
+  &__login-btn {
+    text-decoration: none;
+    color: var(--color-text-secondary-100);
+
+    button {
+      margin: space(5) 0;
+      border-radius: $border-radius-sm;
+    }
+
+  }
+}

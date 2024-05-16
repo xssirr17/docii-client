@@ -1,0 +1,10 @@
+.top-doctors {
+  @include flex(column);
+  gap: space(3);
+
+  &__card-wrapper {
+    border: solid 1px var(--color-background-tertiary);
+    border-radius: $border-radius-sm;
+    width: 100%;
+  }
+}

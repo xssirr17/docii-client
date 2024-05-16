@@ -1,0 +1,26 @@
+.doctor-card {
+  @include flex(column);
+  cursor: pointer;
+  gap: space(2);
+  padding: space(4);
+  min-width: 150px;
+  &__image {
+    margin: auto;
+    border-radius: $border-radius-circle;
+    width: 90px;
+    height: 90px;
+  }
+  &__name {
+    @include typography(body-large);
+    color: var(--color-text-primary-700);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 110px;
+  }
+  &__category {
+    @include typography(body-small);
+    color: var(--color-text-secondary-500);
+    text-align: left;
+  }
+}

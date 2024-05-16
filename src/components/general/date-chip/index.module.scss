@@ -1,0 +1,29 @@
+.date-chip {
+  @include flex(column, $align: center, $justify: center);
+  cursor: pointer;
+  padding: space(3);
+  min-width: 60px;
+  height: 90px;
+  gap: space(2);
+  border-radius: $border-radius-md;
+  --week-color: var(--color-text-secondary-500);
+  --day-color: var(--color-text-primary-700);
+  --border-color: var(--color-background-tertiary);
+
+  border: solid 1px var(--border-color);
+
+  &__week {
+    @include typography(body-medium);
+    color: var(--week-color);
+  }
+  &__day {
+    @include typography(title-large);
+    color: var(--day-color);
+  }
+  &_active-day {
+    background-color: var(--color-palette-primary-400);
+    --border-color: var(--color-palette-primary-400);
+    --day-color: var(--color-text-secondary-100);
+    --week-color: var(--color-text-secondary-100);
+  }
+}

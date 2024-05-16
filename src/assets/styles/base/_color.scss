@@ -1,0 +1,41 @@
+@use '../abstracts' as *;
+
+:root {
+  @each $theme, $colors in $palette {
+    &[theme='#{$theme}'] {
+      @each $name, $color in $colors {
+        @each $key, $value in $color {
+          --color-palette-#{$name}-#{$key}: #{$value};
+        }
+      }
+    }
+  }
+
+  @each $theme, $colors in $text {
+    &[theme='#{$theme}'] {
+      @each $name, $color in $colors {
+        @each $key, $value in $color {
+          --color-text-#{$name}-#{$key}: #{$value};
+        }
+      }
+    }
+  }
+
+  @each $theme, $colors in $background {
+    &[theme='#{$theme}'] {
+      @each $key, $value in $colors {
+        --color-background-#{$key}: #{$value};
+      }
+    }
+  }
+
+  @each $theme, $colors in $alert {
+    &[theme='#{$theme}'] {
+      @each $name, $color in $colors {
+        @each $key, $value in $color {
+          --color-#{$name}-#{$key}: #{$value};
+        }
+      }
+    }
+  }
+}

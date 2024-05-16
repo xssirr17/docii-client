@@ -1,0 +1,23 @@
+.category {
+  @include flex(column, $align: center);
+  cursor: pointer;
+  gap: space(2);
+  &__icon-wrapper {
+    padding: space(2);
+    background-color: var(--color-background-secondary);
+    border-radius: $border-radius-sm;
+    > div > div {
+      @include flex($align: center);
+      width: space(8);
+      height: space(8);
+      svg,
+      path {
+        stroke: var(--color-palette-primary-400);
+      }
+    }
+  }
+  &__title {
+    @include typography(title-medium);
+    color: var(--color-text-secondary-500);
+  }
+}
